@@ -19,7 +19,10 @@
   "openclaw": {
     "extensions": [
       "./index.ts"
-    ]
+    ],
+    "compat": {
+      "pluginApi": "1"
+    }
   },
   "keywords": [
     "openclaw",

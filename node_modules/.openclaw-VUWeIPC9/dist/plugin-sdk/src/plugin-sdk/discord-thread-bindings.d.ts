@@ -1,0 +1,18 @@
+import type { PluginSdkFacadeTypeMap } from "../generated/plugin-sdk-facade-type-map.generated.js";
+type FacadeEntry = PluginSdkFacadeTypeMap["discord-thread-bindings"];
+type FacadeModule = FacadeEntry["module"];
+export declare const autoBindSpawnedDiscordSubagent: FacadeModule["autoBindSpawnedDiscordSubagent"];
+export declare const createThreadBindingManager: FacadeModule["createThreadBindingManager"];
+export declare const getThreadBindingManager: FacadeModule["getThreadBindingManager"];
+export declare const listThreadBindingsBySessionKey: FacadeModule["listThreadBindingsBySessionKey"];
+export declare const resolveThreadBindingIdleTimeoutMs: FacadeModule["resolveThreadBindingIdleTimeoutMs"];
+export declare const resolveThreadBindingInactivityExpiresAt: FacadeModule["resolveThreadBindingInactivityExpiresAt"];
+export declare const resolveThreadBindingMaxAgeExpiresAt: FacadeModule["resolveThreadBindingMaxAgeExpiresAt"];
+export declare const resolveThreadBindingMaxAgeMs: FacadeModule["resolveThreadBindingMaxAgeMs"];
+export declare const setThreadBindingIdleTimeoutBySessionKey: FacadeModule["setThreadBindingIdleTimeoutBySessionKey"];
+export declare const setThreadBindingMaxAgeBySessionKey: FacadeModule["setThreadBindingMaxAgeBySessionKey"];
+export declare const unbindThreadBindingsBySessionKey: FacadeModule["unbindThreadBindingsBySessionKey"];
+export type ThreadBindingManager = FacadeEntry["types"]["ThreadBindingManager"];
+export type ThreadBindingRecord = FacadeEntry["types"]["ThreadBindingRecord"];
+export type ThreadBindingTargetKind = FacadeEntry["types"]["ThreadBindingTargetKind"];
+export {};

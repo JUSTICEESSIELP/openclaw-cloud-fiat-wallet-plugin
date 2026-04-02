@@ -1,0 +1,35 @@
+{
+  "name": "@openclaw/fiat-wallet",
+  "version": "1.0.0",
+  "description": "USDC wallet plugin for OpenClaw with fiat onramp via Novacrust and autonomous x402 spending via Ampersend",
+  "type": "module",
+  "main": "index.ts",
+  "dependencies": {
+    "@1claw/sdk": "^0.17.0",
+    "@sinclair/typebox": "0.34.48",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "openclaw": "2026.3.24-beta.2",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.0"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "keywords": [
+    "openclaw",
+    "wallet",
+    "usdc",
+    "fiat",
+    "novacrust",
+    "ampersend",
+    "x402",
+    "crypto"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "fiat-wallet",
+  "name": "Fiat Wallet",
+  "description": "USDC wallet with fiat onramp. Deposit USD or EUR via bank transfer and spend autonomously via x402.",
+  "version": "1.0.0",
+  "uiHints": {
+    "dailySpendLimit": {
+      "label": "Daily Spend Limit (USDC)",
+      "help": "Maximum amount the agent can spend per day via x402 payments",
+      "placeholder": "50"
+    },
+    "monthlySpendLimit": {
+      "label": "Monthly Spend Limit (USDC)",
+      "help": "Maximum amount the agent can spend per month via x402 payments",
+      "placeholder": "500"
+    },
+    "perTransactionLimit": {
+      "label": "Per Transaction Limit (USDC)",
+      "help": "Maximum amount the agent can spend in a single x402 payment",
+      "placeholder": "5"
+    },
+    "autoInjectBalance": {
+      "label": "Auto-inject balance into context",
+      "help": "Agent always knows its current balance and spend limits before responding",
+      "advanced": false
+    }
+  },
+  "skills": ["./skills"],
+  "contracts": {
+    "tools": [
+      "wallet_balance",
+      "wallet_deposit_info",
+      "wallet_transactions",
+      "wallet_spend_limits",
+      "wallet_kyc_requirements",
+      "wallet_exchange_rate",
+      "wallet_send",
+      "wallet_send_confirm"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "dailySpendLimit": {
+        "type": "number",
+        "description": "Daily x402 spend limit in USDC"
+      },
+      "monthlySpendLimit": {
+        "type": "number",
+        "description": "Monthly x402 spend limit in USDC"
+      },
+      "perTransactionLimit": {
+        "type": "number",
+        "description": "Per transaction x402 spend limit in USDC"
+      },
+      "autoInjectBalance": {
+        "type": "boolean",
+        "description": "Inject wallet balance into agent context before each conversation"
+      }
+    },
+    "required": []
+  }
+}
